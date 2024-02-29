@@ -1,8 +1,7 @@
 # Charge HQ + Enphase + Synology
 
 
-This simple script allows your to upload your local Enphase Solar Energy data to Charge HQ application. It is an excellent application which allows you to charge your Tesla / EV with your excess solar being generated. App doesn't have direct integration with Enphase thus this script comes in handy. 
-
+This simple script allows your to upload your local Enphase Solar Energy data to Charge HQ application. It is an excellent application which allows you to charge your Tesla / EV with your excess solar being generated. App doesn't have direct integration with Enphase thus this script comes in handy. The script has been adapted to be compatible with Synology platforms that do not support the BC command. The BC command has been replaced by the awk command.
 
 **Charge HQ:** https://chargehq.net
 
