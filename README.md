@@ -1,4 +1,4 @@
-# Charge HQ + Enphase
+# Charge HQ + Enphase + Synology
 
 
 This simple script allows your to upload your local Enphase Solar Energy data to Charge HQ application. It is an excellent application which allows you to charge your Tesla / EV with your excess solar being generated. App doesn't have direct integration with Enphase thus this script comes in handy. 
@@ -14,9 +14,9 @@ This simple script allows your to upload your local Enphase Solar Energy data to
 
 This script works with v7.x firmware of Enphase which needs login details to generate a JWT token. Although the expiry is long, it should automatically renew token when expired.
 
-**Tested on:** D7.6.175 Enphase + Raspberry Pi. Reported working on [Envoy Firmware D8.2.114](https://github.com/khandelwalpiyush/chargehq-enphase/issues/1) as well
+**Tested on:**  7.6.172 Enphase + Synology DS218play DSM 7.2.1-69057 Update 4 . Reported working on [Envoy Firmware D8.2.114](https://github.com/khandelwalpiyush/chargehq-enphase/issues/1) as well
 
-It is a shell script which can be run on a windows / linux OS. Please change the following section
+It is a shell script which can be run on a DSM 7.2.1-69057 Update 4. Please change the following section
 
 
 ```
@@ -51,10 +51,8 @@ log_file_path='/home/pi/chargehq/chargehq.log' # Log Location - easy for trouble
 
 ## Automation
 
-The script needs to run as a task scheduler or cronjob / rc.local. Please google for various options. Below links are just example for reference
+The script needs to run as a triggered task scheduler. Below links are just example for reference
 
-**Windows:** https://o365reports.com/2019/08/02/schedule-powershell-script-task-scheduler/
-
-**Linux:** https://www.baeldung.com/linux/run-script-on-startup
+https://kb.synology.com/en-us/DSM/help/DSM/AdminCenter/system_taskscheduler?version=7
 
 Once running, the script will **upload data to Charge HQ every 30 seconds** per their recommendation.
